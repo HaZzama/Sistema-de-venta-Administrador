@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\datos.cs" />
+    <Compile Include="Entidad\categoria.cs" />
+    <Compile Include="Entidad\cliente.cs" />
+    <Compile Include="Entidad\producto.cs" />
+    <Compile Include="Entidad\proveedor.cs" />
     <Compile Include="Gestionar categoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +81,7 @@
     <Compile Include="Menu administrador.Designer.cs">
       <DependentUpon>Menu administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\regla.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gestionar categoria.resx">
@@ -116,6 +122,7 @@
   <ItemGroup>
     <None Include="Resources\300px-Hazama_%28Story_Mode_Artwork,_Pre_Battle%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

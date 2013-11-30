@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Sistema_de_venta_Administrador.Entidad;
 
 namespace Sistema_de_venta_Administrador
 {
@@ -16,5 +17,12 @@ namespace Sistema_de_venta_Administrador
             InitializeComponent();
           
         }
+
+        private void btnIngresarCategoria_Click(object sender, EventArgs e)
+        {
+            categoria ct = new categoria(txtCodigo.Text,txtNombre.Text);
+        }
+
+       
     }
 }
