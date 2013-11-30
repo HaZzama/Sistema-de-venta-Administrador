@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EEF92098-07CC-4A46-9F08-51EF547CCD15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_de_venta_Administrador</RootNamespace>
+    <AssemblyName>Sistema de venta Administrador</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gestionar categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar categoria.Designer.cs">
+      <DependentUpon>Gestionar categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar cliente.Designer.cs">
+      <DependentUpon>Gestionar cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar producto.Designer.cs">
+      <DependentUpon>Gestionar producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar proveedor.Designer.cs">
+      <DependentUpon>Gestionar proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu administrador.Designer.cs">
+      <DependentUpon>Menu administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gestionar categoria.resx">
+      <DependentUpon>Gestionar categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar cliente.resx">
+      <DependentUpon>Gestionar cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar producto.resx">
+      <DependentUpon>Gestionar producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar proveedor.resx">
+      <DependentUpon>Gestionar proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu administrador.resx">
+      <DependentUpon>Menu administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\300px-Hazama_%28Story_Mode_Artwork,_Pre_Battle%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
