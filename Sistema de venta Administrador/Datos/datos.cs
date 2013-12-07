@@ -34,16 +34,27 @@ namespace Sistema_de_venta_Administrador.Datos
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = cnn;
             cnn.Open();
-            cmm.CommandText = "insert into Proveedor values('"+objIngresar.Rut+"','"+objIngresar.Nombre+"','"+objIngresar.Telefono+"','"+objIngresar.Direccion+"')";
-            if (cmm.ExecuteNonQuery() > 0)
+            try
             {
-                MessageBox.Show("Datos Ingresados");
+                
+                cmm.CommandText = "insert into Proveedor values('" + objIngresar.Rut + "-" + objIngresar.Verificador + "','" + objIngresar.Nombre + "','" + objIngresar.Telefono + "','" + objIngresar.Direccion + "')";
+                if (cmm.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Datos Ingresados");
 
+                }
+
+                else
+                {
+                    MessageBox.Show("Datos no Ingresados");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Datos no Ingresados");
-            }
+                MessageBox.Show("el rut ya existe en los registros");
+
+                
+            } 
             cnn.Close();
             cmm.Dispose();
             cnn.Dispose();
@@ -53,7 +64,7 @@ namespace Sistema_de_venta_Administrador.Datos
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = cnn;
             cnn.Open();
-            cmm.CommandText = "delete Proveedor where rut='" + objEliminar.Rut + "'";
+            cmm.CommandText = "delete Proveedor where rut='" + objEliminar.Rut +"-"+objEliminar.Verificador+ "'";
             return cmm.ExecuteNonQuery();
             cnn.Close();
             cmm.Dispose();
@@ -65,7 +76,7 @@ namespace Sistema_de_venta_Administrador.Datos
             SqlCommand cmm = new SqlCommand();
             cmm.Connection = cnn;
             cnn.Open();
-            cmm.CommandText = "update Proveedor set nombreProveedor='" + objActualizar.Nombre + "', telefonoProveedor='" + objActualizar.Telefono + "', direccion='" + objActualizar.Direccion+ "' where rut='" + objActualizar.Rut + "'";
+            cmm.CommandText = "update Proveedor set nombreProveedor='" + objActualizar.Nombre + "', telefonoProveedor='" + objActualizar.Telefono + "', direccion='" + objActualizar.Direccion+ "' where rut='" + objActualizar.Rut +"-"+objActualizar.Verificador+ "'";
             return cmm.ExecuteNonQuery();
             
         }

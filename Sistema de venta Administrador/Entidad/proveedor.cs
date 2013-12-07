@@ -11,15 +11,25 @@ namespace Sistema_de_venta_Administrador.Entidad
         private string nombre;
         private string telefono;
         private string direccion;
+        private string verificador;
 
-        public proveedor(string rut,string nombre,string telefono,string direccion){
+        public string Verificador
+        {
+            get { return verificador; }
+            set { verificador = value; }
+        }
+
+        public proveedor(string rut,string verificador,string nombre,string direccion,string telefono){
             Rut = rut;
             Nombre = nombre;
             Telefono = telefono;
             Direccion = direccion;
+            Verificador = verificador;
+            
         }
-        public proveedor(string rut) {
+        public proveedor(string rut,string verificador) {
             Rut = rut;
+            Verificador = verificador;
         }
         public string Rut
         {

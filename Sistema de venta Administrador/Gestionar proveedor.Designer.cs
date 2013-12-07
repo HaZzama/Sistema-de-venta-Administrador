@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestionar_proveedor));
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnEliminarProveedor = new System.Windows.Forms.Button();
@@ -35,11 +36,16 @@
             this.btnIngreProveedor = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnValidar = new System.Windows.Forms.Button();
+            this.txtVer = new System.Windows.Forms.TextBox();
+            this.txtRut = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.SuspendLayout();
             // 
             // txtDireccion
@@ -83,11 +89,13 @@
             // 
             // btnIngreProveedor
             // 
+            this.btnIngreProveedor.AccessibleDescription = "";
             this.btnIngreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreProveedor.Location = new System.Drawing.Point(175, 205);
             this.btnIngreProveedor.Name = "btnIngreProveedor";
             this.btnIngreProveedor.Size = new System.Drawing.Size(82, 31);
             this.btnIngreProveedor.TabIndex = 19;
+            this.btnIngreProveedor.Tag = "";
             this.btnIngreProveedor.Text = "Ingresar";
             this.btnIngreProveedor.UseVisualStyleBackColor = true;
             this.btnIngreProveedor.Click += new System.EventHandler(this.btnIngreProveedor_Click);
@@ -105,13 +113,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(128, 20);
             this.txtNombre.TabIndex = 17;
-            // 
-            // txtRut
-            // 
-            this.txtRut.Location = new System.Drawing.Point(175, 67);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(100, 20);
-            this.txtRut.TabIndex = 16;
             // 
             // label3
             // 
@@ -153,12 +154,69 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Proveedor";
             // 
+            // btnValidar
+            // 
+            this.btnValidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidar.Location = new System.Drawing.Point(319, 67);
+            this.btnValidar.Name = "btnValidar";
+            this.btnValidar.Size = new System.Drawing.Size(75, 23);
+            this.btnValidar.TabIndex = 33;
+            this.btnValidar.Text = "Validar";
+            this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
+            // 
+            // txtVer
+            // 
+            this.txtVer.Location = new System.Drawing.Point(275, 67);
+            this.txtVer.Name = "txtVer";
+            this.txtVer.Size = new System.Drawing.Size(26, 20);
+            this.txtVer.TabIndex = 32;
+            // 
+            // txtRut
+            // 
+            this.txtRut.Location = new System.Drawing.Point(175, 67);
+            this.txtRut.Name = "txtRut";
+            this.txtRut.Size = new System.Drawing.Size(83, 20);
+            this.txtRut.TabIndex = 31;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(261, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 18);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "-";
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Location = new System.Drawing.Point(459, 12);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(100, 100);
+            this.printPreviewControl1.TabIndex = 35;
+            // 
             // Gestionar_proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(571, 270);
+            this.Controls.Add(this.printPreviewControl1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnValidar);
+            this.Controls.Add(this.txtVer);
+            this.Controls.Add(this.txtRut);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label4);
@@ -167,13 +225,13 @@
             this.Controls.Add(this.btnIngreProveedor);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtRut);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Gestionar_proveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar_proveedor";
+            this.Load += new System.EventHandler(this.Gestionar_proveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,10 +246,15 @@
         private System.Windows.Forms.Button btnIngreProveedor;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtRut;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnValidar;
+        private System.Windows.Forms.TextBox txtVer;
+        private System.Windows.Forms.TextBox txtRut;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
     }
 }
