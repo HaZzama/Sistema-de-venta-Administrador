@@ -15,7 +15,7 @@ namespace Sistema_de_venta_Administrador
         public Gestionar_categoria()
         {
             InitializeComponent();
-          
+            txtCodigo.Enabled = true;
         }
 
         private void btnIngresarCategoria_Click(object sender, EventArgs e)
